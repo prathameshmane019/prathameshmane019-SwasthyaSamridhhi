@@ -1,8 +1,8 @@
 'use client'
 import React, { useState } from 'react';
 import axios from 'axios';
-import DefaultLayout from "../../componants/DefaultLayout"
-import Compoanants from "../../componants/Admin/cadmin"
+import DefaultLayout from "../../componants/Admin/DefaultLayout"
+import Compoanants from "../../componants/Admin/admincomponent"
 
 function ExampleComponent() {
   const [formData, setFormData] = useState({ name: '', age: '' });
@@ -23,8 +23,8 @@ function ExampleComponent() {
   };
 
   return (
-    <div>
-      <DefaultLayout>
+    <div className=' bg-purple-300'>
+      <DefaultLayout className=' bg-purple-300'>
           <Compoanants></Compoanants>
       </DefaultLayout>
     </div>

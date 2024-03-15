@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
 
 const chartSetting = {
@@ -7,9 +7,10 @@ const chartSetting = {
       label: 'rainfall (mm)',
     },
   ],
-  width: 500,
+  width: 600,
   height: 400,
 };
+
 const dataset = [
   {
     london: 59,
@@ -100,13 +101,30 @@ const dataset = [
 const valueFormatter = (value) => `${value}mm`;
 
 export default function HorizontalBars() {
+  const [selectedDisease, setSelectedDisease] = useState('seoul');
+
+  const handleDiseaseChange = (event) => {
+    setSelectedDisease(event.target.value);
+  };
+
   return (
-    <BarChart
-      dataset={dataset}
-      yAxis={[{ scaleType: 'band', dataKey: 'month' }]}
-      series={[{ dataKey: 'seoul', label: 'Seoul rainfall', valueFormatter }]}
-      layout="horizontal"
-      {...chartSetting}
-    />
+    <div>
+      <div>
+        <label>Select Disease:</label>
+        <select value={selectedDisease} onChange={handleDiseaseChange}>
+          <option value="london">London</option>
+          <option value="paris">Paris</option>
+          <option value="newYork">New York</option>
+          <option value="seoul">Seoul</option>
+        </select>
+      </div>
+      <BarChart
+        dataset={dataset}
+        yAxis={[{ scaleType: 'band', dataKey: 'month' }]}
+        series={[{ dataKey: selectedDisease, label: `${selectedDisease} rainfall`, valueFormatter }]}
+        layout="horizontal"
+        {...chartSetting}
+      />
+    </div>
   );
 }

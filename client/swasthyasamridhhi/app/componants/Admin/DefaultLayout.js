@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react"
 import Sidebar from "./sidebar"
-import Header from "./Header/index"
+import Header from "../Header/index"
 
 export default function DefaultLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false)

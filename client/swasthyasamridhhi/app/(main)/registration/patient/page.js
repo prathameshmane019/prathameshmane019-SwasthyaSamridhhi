@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
-import DefaultLayout from "../../../componants/DefaultLayout"
-import PateintReg from "../../../componants/Admin/preg"
+import DefaultLayout from "../../../componants/Admin/DefaultLayout"
+import PateintReg from "../../../componants/Admin/pateintregister"
 
 function ExampleComponent() {
 

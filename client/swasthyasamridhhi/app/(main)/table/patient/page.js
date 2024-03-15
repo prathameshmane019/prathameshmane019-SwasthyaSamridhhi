@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import DefaultLayout from "../../../componants/DefaultLayout"
+import DefaultLayout from "../../../componants/Admin/DefaultLayout"
 import PatientTable from "../../../componants/Table/table"
 
 function ExampleComponent() {

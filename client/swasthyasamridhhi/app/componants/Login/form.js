@@ -10,18 +10,21 @@ const FormComponent = () => {
   };
 
   return (
-    <div className="bg-gray-100 flex justify-center items-center h-screen">
+<div className="bg-gray-100 flex justify-center items-center">
 
-<div className="w-1/2 h-screen hidden lg:block ">
-  <img src="https://placehold.co/800x/667fff/ffffff.png?text=Your+Image&font=Montserrat" alt="Placeholder Image" class="object-cover w-full h-full"></img>
+<div className="w-1/5 h-screen hidden lg:block bg-black ">
+  <img src="https://images.unsplash.com/photo-1504813184591-01572f98c85f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Placeholder Image" class="object-cover bg-black w-full h-full"></img>
 </div>
 
-<div className="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2 ">
+<div className=" lg:w-1/2 ">
 <h2></h2>
-      <button onClick={() => handleUserTypeChange('admin')} className='w-10 bg-blue m-1'>Admin</button>
-      <button onClick={() => handleUserTypeChange('patient')}>Patient</button>
-      <button onClick={() => handleUserTypeChange('doctor')}>Doctor</button>
-
+<div className=' justify-center text-center gap-2 flex'>
+<button onClick={() => handleUserTypeChange('admin')} className='w-16 text-white gap-5 bg-black p-5'>Admin</button>
+      <button onClick={() => handleUserTypeChange('patient')} className='w-16 text-white gap-5 bg-black p-5'>Patient</button>
+      <button onClick={() => handleUserTypeChange('doctor')} className='w-16 text-white gap-5 bg-black p-5'>Doctor</button>
+</div>
+      
+ 
       {userType === 'admin' && <AdminForm />}
       {userType === 'patient' && <PatientForm />}
       {userType === 'doctor' && <DoctorForm />}

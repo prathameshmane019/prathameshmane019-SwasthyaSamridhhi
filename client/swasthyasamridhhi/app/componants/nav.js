@@ -32,12 +32,12 @@ export default function Navbar() {
                         <a href="#" className="block mt-4 md:inline-block md:mt-0 hover:text-gray-200 mr-4">Home</a>
                         <a href="#" className="block mt-4 md:inline-block md:mt-0 hover:text-gray-200 mr-4">About</a>
                         <a href="#" className="block mt-4 md:inline-block md:mt-0 hover:text-gray-200 mr-4">Services</a>
-                        <a href="#" className="block mt-4 md:inline-block md:mt-0 hover:text-gray-200">Contact</a>
+                        <a href="/login" className="block mt-4 md:inline-block md:mt-0 hover:text-gray-200">Contact</a>
                     </div>
                     
                 </div>
                 <div className={`md:flex ${isMenuOpen ? 'block' : 'hidden'} bg-white text-lg md:flex-grow md:flex md:justify-end`}>
-                        <a href="#" className="block mt-4 md:inline-block md:mt-0 hover:text-gray-200">Login</a>
+                        <a href="/login" className="block mt-4 md:inline-block md:mt-0 hover:text-gray-200">Login</a>
                 </div>
             </div>
         </nav>
